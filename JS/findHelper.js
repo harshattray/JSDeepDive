@@ -4,7 +4,7 @@
  * @Project: Retailstore-Attendance-Monitor
  * @Filename: findHelper.js
  * @Last modified by:   harsha
- * @Last modified time: 2017-09-17T23:04:46+05:30
+ * @Last modified time: 2017-09-17T23:13:15+05:30
  */
 
 
@@ -31,3 +31,34 @@ objects.find(function(object){
 })
 
 /*Find returns only the first truthy occurence. Doesnt go beyond one so not good for multiple occurences*/
+
+function FindMe(data){
+  this.data = data;
+}
+
+var randomData = [
+  new FindMe('Yes'),
+  new FindMe('No'),
+  new FindMe('Maybe'),
+]
+randomData.find(function(resData){
+  return resData.data === 'No'
+});
+
+
+var posts = [
+  {id: 1, title: 'New Post'},
+  {id: 2, title: 'Old Post'}
+];
+
+var comment = {
+  postId: 1, content: 'Some Content'
+}
+
+function postsComments(posts,comment){
+  return posts.find(function(post){
+     return post.id === comment.postId
+  })
+}
+
+postsComments(posts,comment)
