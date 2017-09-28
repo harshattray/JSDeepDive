@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2017-09-28T17:09:02+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2017-09-28T17:48:15+05:30
+ * @Last modified time: 2017-09-29T00:34:07+05:30
  */
 
 var expense = {
@@ -65,3 +65,21 @@ const [ name, name2, name3] = items;
 /*OR use spread to fetch whatever that is remaining*/
 
 const [name, ...remaining ] = items
+
+
+/*Destructuring objects within arrays*/
+const Countries = [
+  {name: 'India', Capital: 'New Delhi'},
+  {name: 'UK', Capital: 'London'},
+  {name: 'Spain', Capital: 'Madrid'},
+  {name: 'Russia', Capital: 'Moscow'},
+  {name: 'Australia', Capital: 'Canberra'}
+]
+
+const [{Capital}] = Countries /*fetches the capital off the first array*/
+
+const cities = {
+  amenities: [ 'Bridges', 'Railways', 'Waterways']
+}
+
+const {amenities :[fetch]} = cities;
