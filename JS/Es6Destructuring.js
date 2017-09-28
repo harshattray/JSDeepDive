@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2017-09-28T17:09:02+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2017-09-28T17:36:21+05:30
+ * @Last modified time: 2017-09-28T17:48:15+05:30
  */
 
 var expense = {
@@ -47,3 +47,21 @@ function  filedetailsFetchDesMul({name,extension,size},{shape}){
 }
 
 filedetailsFetchDes(savedFile,{shape:'oval'});
+
+/*Destructuring Arrays*/
+
+const items = [
+  'Mango',
+  'RawMango',
+  'No More Mangoes'
+];
+
+/*This pulls out the first element only*/
+const [ name ] = items;
+/*This pulls out subsequent elements too*/
+
+const [ name, name2, name3] = items;
+
+/*OR use spread to fetch whatever that is remaining*/
+
+const [name, ...remaining ] = items
