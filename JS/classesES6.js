@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2017-09-29T13:30:06+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2017-09-29T14:40:20+05:30
+ * @Last modified time: 2017-09-29T14:45:01+05:30
  */
 
 
@@ -59,11 +59,13 @@ cars.drive();
 
 class Suzuki extends Cars { /*Inheriting in ES6*/
 
-  constructor({color}) {
+  constructor(options) {
+    super(options); /*Like calling Cars.constructor()*/
     this.color = color;
   }
 
   honk() {
+    /*Can use Super here if there was a honk method in the Cars class*/
     return 'HONK HONK';
   }
 }
