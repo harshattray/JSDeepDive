@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2017-09-29T13:30:06+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2017-09-29T14:09:03+05:30
+ * @Last modified time: 2017-09-29T14:40:20+05:30
  */
 
 
@@ -36,3 +36,38 @@ const Suzuki = new Suzuki({color: 'Blue', title: 'Not for Sale'})
 car.drive();
 Suzuki.drive();
 Suzuki.honk();
+
+
+/*ES6 refactor of the above process*/
+
+class Cars {
+  constructor(options) {
+    this.title = options.title;
+  }
+
+  drive (){
+    return 'AutoShift';
+  }
+}
+
+const cars = new Cars({title: 'Suzuki'});
+
+cars.drive();
+
+
+/*New Class*/
+
+class Suzuki extends Cars { /*Inheriting in ES6*/
+
+  constructor({color}) {
+    this.color = color;
+  }
+
+  honk() {
+    return 'HONK HONK';
+  }
+}
+
+const suzuki = new Suzuki({color:'Red'});
+
+suzuki.honk()
