@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2017-09-28T17:09:02+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2017-09-29T00:34:07+05:30
+ * @Last modified time: 2017-09-29T13:25:06+05:30
  */
 
 var expense = {
@@ -83,3 +83,16 @@ const cities = {
 }
 
 const {amenities :[fetch]} = cities;
+
+
+/*Converting an array to an object in ES6*/
+
+const values =[
+  [8,9],
+  [7,3],
+  [2.6]
+]
+
+values.map(([x,y]) => {
+  return {x,y};
+});
